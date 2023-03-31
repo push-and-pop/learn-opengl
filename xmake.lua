@@ -5,6 +5,7 @@ target("learn-opengl")
     add_files("src/*.cpp")
     add_packages("glfw","glad","glm","stb")
     add_includedirs("include")
+    set_rundir("$(projectdir)") --设置运行目录  影响代码中读取文件相对路径
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
