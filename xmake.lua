@@ -1,12 +1,27 @@
+-- add_rules("mode.debug", "mode.release")
+-- add_requires("glfw","glad","glm","stb")
+-- target("learn-opengl")
+--     set_kind("binary")
+--     add_files("src/*.cpp")
+--     add_packages("glfw","glad","glm","stb")
+--     add_includedirs("include")
+--     set_rundir("$(projectdir)") --设置运行目录  影响代码中读取文件相对路径
+--
+--Framebuffers 高级opengl 帧缓冲
 add_rules("mode.debug", "mode.release")
-add_requires("glfw","glad","glm","stb")
+add_requires("glfw","glad","glm","stb","assimp")
 target("learn-opengl")
     set_kind("binary")
-    add_files("src/*.cpp")
-    add_packages("glfw","glad","glm","stb")
+    add_files("src/Framebuffers/*.cpp")
+    add_packages("glfw","glad","glm","stb","assimp")
     add_includedirs("include")
-    set_rundir("$(projectdir)") --设置运行目录  影响代码中读取文件相对路径
---
+    set_rundir("$(projectdir)") 
+
+
+
+
+
+
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
 -- ## FAQ
